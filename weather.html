@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./weather.css">
+</head>
+<body>
+    <div class="main">
+        <div class="searchBox">
+            <input type="text" placeholder="enter city name" spellcheck="false" class="inputBox">
+            <button class="searchBtn"><img src="./images/search.png" ></button>
+        </div>
+        <div class="weather">
+            <img src="./images/rain.png" class="conditionImage">
+            <h1 class="temparature">0°C</h1>
+            <h2 class="condition">.....</h2>
+            <h2 class="error"></h2>
+            <div class="details">
+                <div class="col">
+                    <img src="./images/humidity.png" >
+                
+                <p class="humidity">0%</p>
+                <p>Humidity</p></div>
+            
+            <div class="col">
+                <img src="./images/wind.png" >
+            
+            <p class="windspeed">0 km/h</p>
+            <p>Wind Speed</p></div>
+        
+        </div>
+    </div>
+    </div>
+
+
+
+   <!-- <script >
+    const apiKey = " 224b440e879b4a24bef141608240202 ";
+    const apiUrl = "http://api.weatherapi.com/v1/current.json?key=224b440e879b4a24bef141608240202&q=London&aqi=no";
+
+async function checkWeather(city){
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+    var data = await response.json();
+
+
+    console.log(data);
+    document.querySelector(".city").innerHTML = data.name;
+    document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
+    document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+    document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
+}
+
+checkWeather()
+   </script> -->
+   <script src="./script.js"></script>
+</body>
+</html>
